@@ -1,8 +1,8 @@
-class Gum < Formula
+class Chicle < Formula
     desc "Git User Manager - Platform-agnostic tool for managing multiple Git identities"
-    homepage "https://github.com/permadart/gum"
-    url "https://github.com/permadart/gum/archive/refs/tags/v0.0.1+5.tar.gz"
-    sha256 "ba31ec8957867e1e8dd20833e9ac1451f93da9c57c87a752242a68701c9b6637"
+    homepage "https://github.com/permadart/chicle"
+    url "https://github.com/permadart/chicle/archive/refs/tags/v0.0.1.tar.gz"
+    sha256 "376a4154661159d2858ee84eb72a9002c57c408e9c5c1b98b19febcb6bf96972"
     license "MIT"
 
     depends_on "go" => :build
@@ -12,6 +12,6 @@ class Gum < Formula
     end
 
     test do
-      assert_match "Git User Manager", shell_output("#{bin}/gum --help")
+      assert_match "Git User Manager", shell_output("#{bin}/chicle --help")
     end
   end
