@@ -6,58 +6,70 @@ This repository contains the Homebrew formula for Gum (Git User Manager), a comm
 
 Gum is a platform-agnostic CLI tool that simplifies the process of switching between different Git user configurations and SSH keys. It's particularly useful for developers who work with multiple Git accounts across various services like GitHub, GitLab, and Bitbucket.
 
-### Features
+## Features
 
-- Create and manage multiple Git identities with easy-to-remember aliases
-- Quickly switch between Git configurations
-- Automatic SSH key management
+- Create SSH keys for different Git identities
+- Add existing SSH keys to new identities
+- Switch between Git user configurations easily
 - Works with any Git hosting service
+- Manages global Git configurations and SSH keys
 
 ## Installation
 
-You can install Gum using Homebrew:
+### Using Homebrew
+
+You can install gum using Homebrew:
 
 ```bash
 brew install permadart/gum/gum
 ```
 
+### From Source
+
+If you prefer to install from source or Homebrew is not available:
+
+1. Ensure you have Go installed on your system.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/permadart/gum.git
+   ```
+3. Navigate to the project directory:
+   ```bash
+   cd gum
+   ```
+4. Build the project:
+   ```bash
+   go build -o gum
+   ```
+5. (Optional) Move the binary to a location in your PATH:
+   ```bash
+   sudo mv gum /usr/local/bin/
+   ```
+
 ## Usage
 
-After installation, you can use Gum with the following commands:
-
-### Create a new Git identity
+### Create a new SSH key and identity
 
 ```bash
-gum create --alias work --email work@example.com --name "John Doe"
+gum create --alias user1 --email user@example.com --name "John Doe"
 ```
 
-### Switch to a Git identity
+### Add an existing SSH key to a new identity
 
 ```bash
-gum switch work
+gum create --alias user2 --email user2@example.com --name "Jane Doe" --key ~/.ssh/id_rsa_user2
 ```
 
-### List all stored Git identities
+### Switch Git user
+
+```bash
+gum switch user1
+```
+
+### List all identities
 
 ```bash
 gum list
-```
-
-## Updating
-
-To update Gum to the latest version:
-
-```bash
-brew update
-brew upgrade gum
-```
-
-## Uninstallation
-
-To uninstall Gum:
-
-```bash
-brew uninstall gum
 ```
 
 ## Contributing
@@ -66,7 +78,7 @@ If you encounter any issues or have suggestions for improvements, please open an
 
 ## License
 
-Gum is released under the MIT License. See the LICENSE file in the main repository for more details.
+Gum is released under the MIT License. 
 
 ## Links
 
