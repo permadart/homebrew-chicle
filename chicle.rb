@@ -1,8 +1,8 @@
 class Chicle < Formula
     desc "Git User Manager - Platform-agnostic tool for managing multiple Git identities"
     homepage "https://github.com/permadart/chicle"
-    url "https://github.com/permadart/chicle/archive/refs/tags/v0.0.1+2.tar.gz"
-    sha256 "4f7c842147e0c4098761ca872e3b18329aebbfdd42623386f781febde9942d62"
+    url "https://github.com/permadart/chicle/archive/refs/tags/v0.0.1.tar.gz"
+    sha256 "376a4154661159d2858ee84eb72a9002c57c408e9c5c1b98b19febcb6bf96972"
     license "MIT"
 
     depends_on "go" => :build
