@@ -1,8 +1,8 @@
 class Gum < Formula
     desc "Git User Manager - Platform-agnostic tool for managing multiple Git identities"
     homepage "https://github.com/permadart/gum"
-    url "https://github.com/permadart/gum/archive/refs/tags/v0.0.1+4.tar.gz"
-    sha256 "efaff024bf95b42113506fb52b5174ba1523112ce1ca828fea9f27331519d6ad"
+    url "https://github.com/permadart/gum/archive/refs/tags/v0.0.1+5.tar.gz"
+    sha256 "ba31ec8957867e1e8dd20833e9ac1451f93da9c57c87a752242a68701c9b6637"
     license "MIT"
 
     depends_on "go" => :build
